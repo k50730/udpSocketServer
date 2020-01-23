@@ -23,7 +23,7 @@ def connectionLoop(sock):
             clients[addr] = {}
             clients[addr]['lastBeat'] = datetime.now()
             clients[addr]['color'] = 0
-            message = {"cmd": 0,"player":{"id":str(addr)}}
+            message = {"cmd": 0,"player":[{"id":str(addr)}]}
             m = json.dumps(message)
             newMessage = {"cmd": 2,"player":[]}
             
